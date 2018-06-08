@@ -1,0 +1,21 @@
+{
+  "name": "top-5000-songs",
+  "version": "1.0.0",
+  "main": "TopSongsCode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^1.2.3",
+    "json": "^9.0.6",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "\\"
+  },
+  "description": ""
+}

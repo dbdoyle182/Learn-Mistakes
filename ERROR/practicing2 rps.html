@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock, Paper Scissors</title>
+
+</head>
+<body>
+    <div id="game">
+    <h1>Please let play Rock Paper Scissor Game</h1>
+    <h3>Press R, P or S to Start </h3>
+    </div>
+
+    <script>
+        var options = ["r", "p","s"];
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+        document.onkeyup = function(event){
+            //     pessoa fazer escolha e trasnformat em lower case e print the answer
+            var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+            
+            //     pc fazer escolha e print the pc answer
+            var computerGuess = options[Math.floor(Math.random()*options. length)];
+            
+            //   fazer  as resposta do guess ser as tres letras r, p, s
+            if (userGuess=="r" ||userGuess =="p" || userGuess =="s"){
+
+               if ((userGuess=="r") &&(computerGuess=="s")){
+                   wins++;
+                 
+               }
+               if ((userGuess=="r") &&(computerGuess=="p")){
+                   losses++;
+                  
+                }
+                if ((userGuess=="s") &&(computerGuess=="p")){
+                    wins++;
+                    
+                }
+                if ((userGuess=="s") &&(computerGuess=="r")){
+                    losses++;
+                   
+                }
+                if ((userGuess=="p") &&(computerGuess=="s")){
+                    losses++;
+                    
+                }
+                if ((userGuess=="p") &&(computerGuess=="r")){
+                    losses++;
+                   
+                }
+                if ((userGuess)==(computerGuess)){
+                    ties++;
+                    
+            } else{
+
+                alert("Please choose r,p, s");
+            }  
+            
+            var html = "<p>Press r, p, or s to start playing </p>" +
+            "<p> wins:" + wins + "</p>" +
+            "<p>losses:" + losses + "</p>" +
+            "<p>ties:" + ties + "</p>";
+            document.querySelector("#game").innerHTML = html;
+        }
+    };
+    
+    </script>
+</body>
+</html>
